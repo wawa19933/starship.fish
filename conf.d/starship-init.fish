@@ -10,6 +10,8 @@
 #     rm /tmp/starship-install.sh
 # end
 
-if type -q starship
-   starship init fish | source
+if status --is-interactive
+    if type -q starship
+       starship init fish | source
+    end
 end
